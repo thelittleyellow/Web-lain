@@ -18,7 +18,7 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="sticky top-0 z-50 w-full glass-nav">
+    <nav className="sticky top-0 z-50 w-full glass-nav bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -44,15 +44,16 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Button className="bg-gradient-primary hover:opacity-90 text-white border-0">
+            <Button className="bg-gradient-primary hover:opacity-90 text-white border-0 shadow-md hover:shadow-lg transition-all">
               Hubungi Kami
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-foreground"
+            className="md:hidden p-2 text-primary hover:bg-primary/10 rounded-md transition-colors"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -61,23 +62,25 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-sm">
+        <div className="md:hidden border-t border-border bg-background shadow-xl absolute w-full left-0 top-16 z-50 animate-accordion-down">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className={`text-sm font-medium py-2 transition-colors hover:text-primary ${
-                  isActive(link.path) ? 'text-primary' : 'text-muted-foreground'
+                className={`text-sm font-medium py-3 px-4 rounded-md transition-colors hover:bg-primary/5 ${
+                  isActive(link.path) ? 'text-primary bg-primary/10 font-bold' : 'text-foreground'
                 }`}
               >
                 {link.name}
               </Link>
             ))}
-            <Button className="w-full bg-gradient-primary text-white border-0">
-              Hubungi Kami
-            </Button>
+            <div className="px-4 pb-2">
+              <Button className="w-full bg-gradient-primary text-white border-0 shadow-md">
+                Hubungi Kami
+              </Button>
+            </div>
           </div>
         </div>
       )}
