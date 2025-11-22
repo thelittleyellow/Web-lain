@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Purple Theme based on the reference image */
+    --background: 260 30% 98%; /* Very light lavender tint */
+    --foreground: 260 50% 10%; /* Deep purple-black */
+
+    --card: 0 0% 100%;
+    --card-foreground: 260 50% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 260 50% 10%;
+
+    /* Vibrant Purple Primary */
+    --primary: 265 89% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Pink/Magenta Secondary */
+    --secondary: 310 90% 65%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 260 20% 90%;
+    --muted-foreground: 260 10% 40%;
+
+    --accent: 260 30% 90%;
+    --accent-foreground: 265 89% 60%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 260 20% 90%;
+    --input: 260 20% 90%;
+    --ring: 265 89% 60%;
+
+    --radius: 1rem;
+
+    /* Custom Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(260 30% 98%) 0%, hsl(265 89% 95%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(265 89% 60%), hsl(310 90% 65%));
+    --gradient-dark: linear-gradient(180deg, hsl(260 50% 10%), hsl(260 60% 15%));
+    --gradient-card: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+  }
+
+  .dark {
+    --background: 260 50% 10%;
+    --foreground: 260 10% 95%;
+
+    --card: 260 50% 12%;
+    --card-foreground: 260 10% 95%;
+
+    --popover: 260 50% 12%;
+    --popover-foreground: 260 10% 95%;
+
+    --primary: 265 89% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 310 90% 65%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 260 30% 20%;
+    --muted-foreground: 260 10% 70%;
+
+    --accent: 260 30% 20%;
+    --accent-foreground: 260 10% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 260 30% 20%;
+    --input: 260 30% 20%;
+    --ring: 265 89% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom Utilities for the specific design style */
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+  }
+  
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+
+  .glass-nav {
+    @apply bg-background/80 backdrop-blur-lg border-b border-border/50;
+  }
+  
+  .hero-glow {
+    box-shadow: 0 0 100px 20px hsl(var(--primary) / 0.2);
+  }
+}
