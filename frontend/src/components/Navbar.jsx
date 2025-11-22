@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Beaker } from 'lucide-react';
+import { Menu, X, Activity } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
@@ -23,12 +23,13 @@ const Navbar = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <div className="bg-gradient-primary p-2 rounded-lg">
-              <Beaker className="h-6 w-6 text-white" />
+            <div className="bg-red-600 p-2 rounded-lg shadow-lg">
+              <Activity className="h-6 w-6 text-white" />
             </div>
-            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-              LABORATORIUM
-            </span>
+            <div className="flex flex-col">
+              <span className="text-lg font-bold leading-none text-foreground">FISIKA MEDIK</span>
+              <span className="text-xs font-bold text-red-600 tracking-widest">UNHAS</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -44,8 +45,8 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Button className="bg-gradient-primary hover:opacity-90 text-white border-0 shadow-md hover:shadow-lg transition-all">
-              Hubungi Kami
+            <Button className="bg-red-600 hover:bg-red-700 text-white border-0 shadow-md hover:shadow-lg transition-all">
+              Hubungi Lab
             </Button>
           </div>
 
@@ -77,8 +78,8 @@ const Navbar = () => {
               </Link>
             ))}
             <div className="px-4 pb-2">
-              <Button className="w-full bg-gradient-primary text-white border-0 shadow-md">
-                Hubungi Kami
+              <Button className="w-full bg-red-600 hover:bg-red-700 text-white border-0 shadow-md">
+                Hubungi Lab
               </Button>
             </div>
           </div>
