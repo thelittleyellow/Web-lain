@@ -211,9 +211,8 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Mobile Responsiveness"
-  stuck_tasks:
-    - "Mobile Responsiveness"
+    - "All tasks completed"
+  stuck_tasks: []
   test_all: true
   test_priority: "high_first"
 
