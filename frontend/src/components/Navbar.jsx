@@ -123,7 +123,7 @@ const Navbar = () => {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-muted-foreground">Telepon / WhatsApp</p>
-                      <p className="font-bold text-foreground">+62 812 3456 7890</p>
+                      <p className="font-bold text-foreground">0895339014830</p>
                     </div>
                   </div>
                   
@@ -133,7 +133,7 @@ const Navbar = () => {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-muted-foreground">Email</p>
-                      <p className="font-bold text-foreground">fisikamedik@sci.unhas.ac.id</p>
+                      <p className="font-bold text-foreground">ichanurandhini1204@gmail.com</p>
                     </div>
                   </div>
 
@@ -227,11 +227,11 @@ const Navbar = () => {
                   <div className="grid gap-4 py-4">
                     <div className="flex items-center gap-3">
                       <Phone className="h-4 w-4 text-primary" />
-                      <span className="text-sm font-bold">+62 812 3456 7890</span>
+                      <span className="text-sm font-bold">0895339014830</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Mail className="h-4 w-4 text-primary" />
-                      <span className="text-sm font-bold">fisikamedik@sci.unhas.ac.id</span>
+                      <span className="text-sm font-bold">ichanurandhini1204@gmail.com</span>
                     </div>
                   </div>
                 </DialogContent>
