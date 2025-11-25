@@ -5,6 +5,13 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="flex flex-col w-full">
       {/* Hero Section */}
@@ -39,12 +46,18 @@ const Home = () => {
                 Pusat unggulan riset dan pengembangan aplikasi fisika dalam bidang medis, radioterapi, dan pencitraan medis untuk kesehatan masa depan.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-                <Button size="lg" className="bg-gradient-primary text-white border-0 h-12 px-8 rounded-full shadow-lg hover:shadow-primary/50 transition-all">
+                <Button 
+                  size="lg" 
+                  onClick={() => scrollToSection('about')}
+                  className="bg-gradient-primary text-white border-0 h-12 px-8 rounded-full shadow-lg hover:shadow-primary/50 transition-all"
+                >
                   Profil Lab
                 </Button>
-                <Button size="lg" variant="outline" className="h-12 px-8 rounded-full border-2 hover:bg-primary/5">
-                  Riset Kami
-                </Button>
+                <Link to="/equipment">
+                  <Button size="lg" variant="outline" className="h-12 px-8 rounded-full border-2 hover:bg-primary/5">
+                    Alat & Fasilitas
+                  </Button>
+                </Link>
               </div>
             </div>
             
@@ -77,7 +90,7 @@ const Home = () => {
       </section>
 
       {/* About Section - Dark Background */}
-      <section className="py-24 bg-foreground text-white relative overflow-hidden">
+      <section id="about" className="py-24 bg-foreground text-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">

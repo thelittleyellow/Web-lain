@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import Equipment from './pages/Equipment';
 import IchaProfile from './pages/members/Icha';
 import ArmithaProfile from './pages/members/Armitha';
 import EkaProfile from './pages/members/Eka';
@@ -17,6 +18,7 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/equipment" element={<Equipment />} />
             <Route path="/member/icha" element={<IchaProfile />} />
             <Route path="/member/armitha" element={<ArmithaProfile />} />
             <Route path="/member/eka" element={<EkaProfile />} />
