@@ -4,9 +4,9 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import IchaProfile from './pages/members/Icha';
-import Member2 from './pages/members/Member2';
-import Member3 from './pages/members/Member3';
-import Member4 from './pages/members/Member4';
+import ArmithaProfile from './pages/members/Armitha';
+import EkaProfile from './pages/members/Eka';
+import NurfaikaProfile from './pages/members/Nurfaika';
 import { Toaster } from "@/components/ui/sonner";
 
 function App() {
@@ -18,9 +18,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/member/icha" element={<IchaProfile />} />
-            <Route path="/member/2" element={<Member2 />} />
-            <Route path="/member/3" element={<Member3 />} />
-            <Route path="/member/4" element={<Member4 />} />
+            <Route path="/member/armitha" element={<ArmithaProfile />} />
+            <Route path="/member/eka" element={<EkaProfile />} />
+            <Route path="/member/nurfaika" element={<NurfaikaProfile />} />
           </Routes>
         </main>
         <Footer />

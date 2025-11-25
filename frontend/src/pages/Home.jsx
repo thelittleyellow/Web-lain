@@ -153,7 +153,11 @@ const Home = () => {
               <Card className="h-full border-0 shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 bg-gradient-to-br from-purple-50 to-white dark:from-gray-900 dark:to-gray-800">
                 <div className="h-48 bg-gradient-primary flex items-center justify-center relative overflow-hidden">
                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all"></div>
-                   <Users className="w-20 h-20 text-white opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                   <img 
+                      src="https://customer-assets.emergentagent.com/job_lab-team/artifacts/biwzag6a_icha.jpeg" 
+                      alt="Icha Nurandhini" 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                   />
                    <div className="absolute top-2 right-2 bg-red-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold">UNHAS</div>
                 </div>
                 <CardContent className="p-6 text-center">
@@ -166,17 +170,21 @@ const Home = () => {
               </Card>
             </Link>
 
-            {/* Member 2 */}
-            <Link to="/member/2" className="group">
+            {/* Member 2 - Armitha */}
+            <Link to="/member/armitha" className="group">
               <Card className="h-full border-0 shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 bg-gradient-to-br from-pink-50 to-white dark:from-gray-900 dark:to-gray-800">
                 <div className="h-48 bg-gradient-to-br from-secondary to-pink-400 flex items-center justify-center relative overflow-hidden">
                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all"></div>
-                   <Users className="w-20 h-20 text-white opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                   <img 
+                      src="https://customer-assets.emergentagent.com/job_lab-team/artifacts/muxjq84c_armitha.jpeg" 
+                      alt="Armitha Anas" 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                   />
                    <div className="absolute top-2 right-2 bg-red-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold">UNHAS</div>
                 </div>
                 <CardContent className="p-6 text-center">
-                  <h3 className="font-bold text-xl mb-1 group-hover:text-secondary transition-colors">Member 2</h3>
-                  <p className="text-sm text-muted-foreground mb-4">NIM: XXXXXXXX</p>
+                  <h3 className="font-bold text-xl mb-1 group-hover:text-secondary transition-colors">Armitha Anas</h3>
+                  <p className="text-sm text-muted-foreground mb-4">H021231060</p>
                   <Button className="w-full rounded-full bg-secondary/10 text-secondary hover:bg-secondary hover:text-white transition-all">
                     Lihat Profil
                   </Button>
@@ -184,17 +192,21 @@ const Home = () => {
               </Card>
             </Link>
 
-            {/* Member 3 */}
-            <Link to="/member/3" className="group">
+            {/* Member 3 - Eka */}
+            <Link to="/member/eka" className="group">
               <Card className="h-full border-0 shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800">
                 <div className="h-48 bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center relative overflow-hidden">
                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all"></div>
-                   <Users className="w-20 h-20 text-white opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                   <img 
+                      src="https://customer-assets.emergentagent.com/job_lab-team/artifacts/yvjyo7gk_eka.jpeg" 
+                      alt="Eka Adelia" 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                   />
                    <div className="absolute top-2 right-2 bg-red-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold">UNHAS</div>
                 </div>
                 <CardContent className="p-6 text-center">
-                  <h3 className="font-bold text-xl mb-1 group-hover:text-blue-500 transition-colors">Member 3</h3>
-                  <p className="text-sm text-muted-foreground mb-4">NIM: XXXXXXXX</p>
+                  <h3 className="font-bold text-xl mb-1 group-hover:text-blue-500 transition-colors">Eka Adelia Putri</h3>
+                  <p className="text-sm text-muted-foreground mb-4">H021231065</p>
                   <Button className="w-full rounded-full bg-blue-500/10 text-blue-500 hover:bg-blue-500 hover:text-white transition-all">
                     Lihat Profil
                   </Button>
@@ -202,17 +214,21 @@ const Home = () => {
               </Card>
             </Link>
 
-            {/* Member 4 */}
-            <Link to="/member/4" className="group">
+            {/* Member 4 - Nurfaika */}
+            <Link to="/member/nurfaika" className="group">
               <Card className="h-full border-0 shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 bg-gradient-to-br from-green-50 to-white dark:from-gray-900 dark:to-gray-800">
                 <div className="h-48 bg-gradient-to-br from-emerald-500 to-green-400 flex items-center justify-center relative overflow-hidden">
                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all"></div>
-                   <Users className="w-20 h-20 text-white opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                   <img 
+                      src="https://customer-assets.emergentagent.com/job_lab-team/artifacts/an9bns59_nurfaika.jpeg" 
+                      alt="Nurfaika" 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                   />
                    <div className="absolute top-2 right-2 bg-red-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold">UNHAS</div>
                 </div>
                 <CardContent className="p-6 text-center">
-                  <h3 className="font-bold text-xl mb-1 group-hover:text-emerald-500 transition-colors">Member 4</h3>
-                  <p className="text-sm text-muted-foreground mb-4">NIM: XXXXXXXX</p>
+                  <h3 className="font-bold text-xl mb-1 group-hover:text-emerald-500 transition-colors">Nurfaika</h3>
+                  <p className="text-sm text-muted-foreground mb-4">H021231048</p>
                   <Button className="w-full rounded-full bg-emerald-500/10 text-emerald-500 hover:bg-emerald-500 hover:text-white transition-all">
                     Lihat Profil
                   </Button>
