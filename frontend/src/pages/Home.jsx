@@ -1,7 +1,7 @@
 import React from 'react';
-import { ArrowRight, Microscope, Atom, Dna, Users, Trophy, Activity, Scan, Zap } from 'lucide-react';
+import { ArrowRight, Microscope, Atom, Dna, Users, Trophy, Activity, Scan, Zap, Award, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -150,16 +150,58 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Members Section */}
+      {/* Staff & Lecturers Section */}
       <section className="py-24 bg-background relative">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 uppercase">Anggota Laboratorium</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 uppercase">Tim Pengajar & Staf</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Mahasiswa dan Peneliti Fisika Medik Universitas Hasanuddin.
+              Struktur organisasi dan dosen pembimbing Laboratorium Fisika Medik.
             </p>
           </div>
 
+          {/* Head of Lab */}
+          <div className="flex justify-center mb-16">
+            <Card className="w-full max-w-md border-0 shadow-xl bg-gradient-to-br from-white to-purple-50 dark:from-gray-800 dark:to-gray-900 overflow-hidden relative">
+              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-secondary"></div>
+              <CardContent className="p-8 text-center">
+                <div className="w-24 h-24 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                  <Award className="w-12 h-12 text-primary" />
+                </div>
+                <h3 className="text-sm font-bold text-primary uppercase tracking-wider mb-2">Kepala Laboratorium</h3>
+                <h4 className="text-2xl font-bold text-foreground mb-2">Prof.Dr. Syamsir Dewang, M.Eng.Sc</h4>
+                <div className="w-16 h-1 bg-primary/20 mx-auto rounded-full mt-4"></div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Lecturers Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+            {[
+              "Sri Dewi Astuti S.Si.,M.Si.,F.Med",
+              "Ajeng Anggreany Ibrahim S.Pd.,M.Si",
+              "Ayu Hardianti Pratiwi S.Pd.,M.Si",
+              "Arfinna S.Si.,M.Si.,F.Med"
+            ].map((name, index) => (
+              <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-all bg-white dark:bg-gray-800">
+                <CardContent className="p-6 flex flex-col items-center text-center">
+                  <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-4">
+                    <GraduationCap className="w-8 h-8 text-secondary" />
+                  </div>
+                  <h3 className="font-bold text-lg text-foreground mb-1">{name}</h3>
+                  <p className="text-sm text-muted-foreground">Dosen</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Students Section Title */}
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 uppercase">Anggota Mahasiswa</h2>
+            <div className="w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+          </div>
+
+          {/* Students Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Member 1 - Icha */}
             <Link to="/member/icha" className="group">
